@@ -1,0 +1,63 @@
+
+:root{
+  --offcanvas-width:270px;
+  --topNavbarHeight: 56px;
+}
+/* Inhalt von oben -----------------------------*/
+/* freie Klassen -----------------------------*/
+.nav-padding-mva{
+  padding-left: 11%;
+}
+.sidebar-nav{
+  width: var(--offcanvas-width);
+}
+.sidevar-link{
+  display: flex;
+  align-items: center;
+}
+.sidevar-link .right-icon{
+  display: inline-flex;
+  transition: all ease 0.25s;
+}
+.sidevar-link[aria-expanded="true"] .right-icon{
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  body{
+    overflow: auto; /*Important*/
+  }
+  .offcanvas-backdrop::before{
+    display: none;
+  }
+  main{
+    margin-left: var(--offcanvas-width);
+  }
+  .sidebar-nav{
+    transform: none;
+    visibility: visible; /*Important*/
+    top: var(--topNavbarHeight);
+    height: calc(100% - var(--topNavbarHeight));
+  }  
+}
+.myTitel{
+  background-color: rgb(194, 195, 196);
+  line-height: 3rem;
+  border-radius: 10px;
+}
+.aaa{
+  width: 80%;
+}
+#gridContainer [class*="col"]{
+  padding: 1rem;
+  text-align: center;
+  border:2px solid;
+}
+#gridContainer span{
+ line-height: 2rem;
+}
+.bildContainer{
+  width: 40%; 
+}
+.border-mva{
+  border: 5px rgb(133, 94, 94) solid;
+}
